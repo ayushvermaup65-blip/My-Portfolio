@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      class="fevicon-image"
+      rel="shortcut icon"
+      href="./images/ayush.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="title">
+        <img class="logo" onclick="homePage()" src="./images/AV.png" alt="Logo" />
+        <span class="title-text" onclick="homePage()">Ayush Verma</span>
+      </div>
+      <div class="nav-links" id="nav-links">
+        <a class="allNavLinks" id="about" href="#about-section">About</a>
+        <a  class="allNavLinks" href="#skills-header">Skills</a>
+        <a class="allNavLinks" href="#project_section">Projects</a>
+        <a  class="allNavLinks" href="#contact-section">Contact</a>
+        <button onclick="showPopup()">Resume</button>
+
+        <div id="popup">
+          <img id="OOS" src="./images/out-of-stock.png" alt="">
+          <p>Resume is not available currently.</p>
+          <button id="popupButton" onclick="closePopup()">Close</button>
+        </div>
+      </div>
+
+      <img
+        src="./images/menu.png"
+        alt="menuButton"
+        id="MenuButton"
+        class="menu-icon"
+        onclick="toggleMenu();"
+      />
+    </header>
+    
+      <!-- main content -->
+    <main class="main-content">
+      <img id="personImage" src="./images/ayushProfilePic.jpg" alt="person picture" />
+      <div class="jfjf">
+        <h1 class="name">Ayush Verma</h1>
+      <p class="passion">Web Developer</p>
+      <p class="desc">
+        Passionate web developer with a focus on creating innovative solutions.
+      </p>
+      <p class="desc">
+        Experienced in full-stack development, with a strong foundation in C,
+        C++, and modern web <span id="skills-header">technologies.</span>
+      </p>
+      </div>
+      
+    </main>
+
+    <!-- skills content -->
+    <div id="skills_section" class="skills">
+      <h1 class="skills-header">Technical Skills</h1>
+
+      <div class="Skills-list">
+        <h2 class="Skills-title">C</h2>
+        <h2 class="Skills-title">C++</h2>
+        <h2 class="Skills-title">HTML</h2>
+        <h2 class="Skills-title">CSS</h2>
+        <h2 class="Skills-title">JavaScript</h2>
+        <h2 class="Skills-title">React.js</h2>
+        <h2 class="Skills-title">Redux</h2>
+        <h2 class="Skills-title">Styled Components</h2>
+        <h2 class="Skills-title">Tailwind CSS</h2>
+        <h2 class="Skills-title">Node.js</h2>
+      </div>
+    </div>
+
+    <!-- project content -->
+    <div id="project_section" class="project-section">
+      <h2 id="header">Projects</h2>
+
+      <div class="project-cards">
+        <!--  card 1 start  -->
+          
+        <div class="card_container">
+          <a href="https://dice-game-omega-black.vercel.app/" class="card_image_container">
+            <img
+              src="./images/dice game image.png"
+              alt="card 1 image"
+              class="card_image"
+              loading="lazy"
+            />
+          </a>
+
+          <h3 id="project_title">Dice Game</h3>
+          <p id="project_desc">A dice game that is build from React.js</p>
+        </div>
+        <!--  card 1 end -->
+
+        <!--  card 2 start  -->
+        <div class="card_container">
+          <a href="#" class="card_image_container">
+            <img
+              src="./images/projectImage.jpg"
+              alt="card 1 image"
+              class="card_image"
+              loading="lazy"
+            />
+          </a>
+
+          <h3 id="project_title">Lorem, ipsum.</h3>
+          <p id="project_desc">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <!--  card 2 end -->
+
+        <!--  card 3 start  -->
+        <div class="card_container">
+          <a href="#" class="card_image_container">
+            <img
+              src="./images/projectImage.jpg"
+              alt="card 1 image"
+              class="card_image"
+              loading="lazy"
+            />
+          </a>
+
+          <h3 id="project_title">Lorem, ipsum.</h3>
+          <p id="project_desc">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <!--  card 3 end -->
+
+        <!--  card 4 start  -->
+        <div class="card_container">
+          <a href="#" class="card_image_container">
+            <img
+              src="./images/projectImage.jpg"
+              alt="card 1 image"
+              class="card_image"
+              loading="lazy"
+            />
+          </a>
+
+          <h3 id="project_title">Lorem, ipsum.</h3>
+          <p id="project_desc">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <!--  card 4 end -->
+      </div>
+    </div>
+
+    <!-- about content -->
+    <div id="about-section" class="about-section">
+      <h1 id="about_title">About Me</h1>
+
+      <div  class="about_section">
+        <img loading="lazy" src="./images/ayushProfilePic.jpg" alt="ayush image" id="about_image" />
+        <p id="about_desc"></p>
+        <h2>Hi, I'm Ayush Verma 👋</h2>
+      </div>
+      <div class="about_desc">
+        <div class="div1">
+          <img loading="lazy" id="logo_id" src="./images/visual selection 1.svg" alt="" />
+          <p>
+            I'm a passionate <strong>Web Developer</strong> with a strong
+            foundation in <strong>C, C++</strong>, and expertise in modern web
+            technologies like
+            <strong>HTML, CSS, JavaScript, React.js, Node.js</strong>.
+          </p>
+        </div>
+
+        <div class="div2">
+          <img loading="lazy" id="logo_id" src="./images/_- visual selection 2.svg" alt="" />
+          <p>
+            I enjoy building user-friendly and responsive web applications,
+            solving real-world problems, and exploring new technologies to stay
+            ahead in the industry.
+          </p>
+        </div>
+
+        <div class="div3">
+          <img loading="lazy" id="logo_id3" src="./images/visual selection 3.svg" alt="" />
+          <p>
+            When I'm not coding, you can find me experimenting with new tools,
+            learning design trends, or working on exciting side projects. 🚀
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- contact content -->
+    <div id="contact-section" class="contact_section">
+      <h1 class="contact_title">Contact Us</h1>
+      <form class="form">
+        <label for="name">Enter Name</label>
+        <input
+          class="form-control"
+          required
+          autocomplete="off"
+          id="name"
+          type="text"
+          placeholder="Enter Name"
+        />
+        <div id="usernameError" class="error"></div>
+
+        <label for="email">Enter Email</label>
+        <input
+          class="form-control"
+          required
+          autocomplete="off"
+          id="email"
+          type="email"
+          placeholder="Enter Email"
+        />
+        <div id="emailError" class="error"></div>
+
+        <label for="phoneNumber">Enter Phone Number</label>
+        <input
+          class="form-control"
+          required
+          autocomplete="off"
+          id="phoneNumber"
+          type="tel"
+          placeholder="Enter Phone Number"
+        />
+        <div id="phoneNumberError" class="error"></div>
+
+        <label for="commentArea">Comment</label>
+        <textarea
+          class="form-control"
+          autocomplete="off"
+          id="commentArea"
+          placeholder="Enter comment here..."
+        ></textarea>
+
+        <button id="submit" class="formSubmit" type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- footer content -->
+    <footer class="footer">
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/ayush-verma-b67937337">
+          <img src="./images/linkedin-copy.svg" alt="" />
+        </a>
+        <a href="https://x.com/AyushVerma70">
+          <img src="./images/twitter.svg" alt="" />
+        </a>
+        <a href="https://github.com/ayushvermaup65-blip">
+          <img src="./images/github.svg" alt="" />
+        </a>
+        <a href="https://www.instagram.com/ayushverma6797/">
+          <img src="./images/instagram.svg" alt="" />
+        </a>
+      </div>
+      <div class="footer-text">2025 Ayush Verma. All rights reserved.</div>
+    </footer>
+
+  
+    
+
+    <script src="main.js"></script>
+
+  </body>
+</html>
