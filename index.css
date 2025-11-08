@@ -140,7 +140,7 @@ header {
 
 }
 
-#nav-links button {
+#nav-links #resumeid {
   font-weight: bold;
   margin-left: 20px;
   padding: 10px 20px;
@@ -151,8 +151,8 @@ header {
   cursor: pointer;
   font-size: 18px;
 }
-#nav-links button:hover{
-  background-color: #058b6c;
+#nav-links #resumeid:hover{
+  background-color:  #1d5447;
   color: white;
 }
 #popup {
@@ -175,7 +175,7 @@ header {
 }
 
 @media screen and (max-width: 1116px) {
-  #nav-links button {
+  #nav-links #resumeid {
     background-color: var(--heading);
     color: var(--titles);
     margin-bottom: 1rem;
