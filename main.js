@@ -101,3 +101,30 @@ function getStoredData() {
 // Call function when page loads (optional)
 window.onload = getStoredData;
 
+
+
+
+function sendEmail() {
+  var params = {
+    name: document.getElementById("name").value ,
+    email: document.getElementById("email").value ,
+    phoneNumber: document.getElementById("phoneNumber").value ,
+    comment: document.getElementById("commentArea").value ,
+  };
+  
+  const serviceID = "service_ovh8dii";
+  const templateID = "template_7p2hnws";
+
+  emailjs
+    .send(serviceID, templateID, params)
+    .then((res) => {
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("phoneNumber").value = "";
+      document.getElementById("commentArea").value = "";
+      console.log(res);
+      alert("Your message sent successfully!");
+    })
+    .catch((err) => console.log(err));
+
+}
