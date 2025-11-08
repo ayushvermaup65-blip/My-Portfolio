@@ -8,16 +8,6 @@ let menuList = document.getElementById("nav-links");
         }
       }
 
-let popup = document.getElementById("popup");
-
-      function showPopup() {
-        popup.style.display = "flex";
-
-      }
-
-      function closePopup() {
-        popup.style.display = "none";
-      }
 
 let homepage = document.querySelector(".title-text");
       function homePage() {
@@ -60,7 +50,7 @@ document.querySelector(".formSubmit").addEventListener("click", (e) => {
   }
 
   if (isValid) {
-    // Create object to store form data
+    // Created object, form ka data store karne ke liye
     let formData = {
       username: username,
       email: email,
@@ -68,8 +58,6 @@ document.querySelector(".formSubmit").addEventListener("click", (e) => {
       comment: comment,
     };
 
-    // ✅ Store in localStorage (stringify to save object)
-    localStorage.setItem("userData", JSON.stringify(formData));
 
     // Clear form fields
     document.getElementById("name").value = "";
@@ -78,30 +66,9 @@ document.querySelector(".formSubmit").addEventListener("click", (e) => {
     document.getElementById("commentArea").value = "";
 
     console.log("Data saved:", formData);
-    alert("Message shared to Ayush Verma.");
+   
   }
 });
-
-// ✅ Function to access and display stored data
-function getStoredData() {
-  let savedData = localStorage.getItem("userData");
-  if (savedData) {
-    let parsedData = JSON.parse(savedData);
-    console.log("Retrieved Data:", parsedData);
-
-    // Example: show retrieved data in an alert
-    // alert(
-    //   `Stored Data:\nName: ${parsedData.username}\nEmail: ${parsedData.email}\nPhone: ${parsedData.phoneNumber}\nComment: ${parsedData.comment}`
-    // );
-  } else {
-    console.log("No data found in Local Storage.");
-  }
-}
-
-// Call function when page loads (optional)
-window.onload = getStoredData;
-
-
 
 
 function sendEmail() {
