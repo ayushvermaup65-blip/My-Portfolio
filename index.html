@@ -11,6 +11,16 @@
       href="./images/ayush.png"
       type="image/x-icon"
     />
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "EASnOOQTip8vguTR-",
+      });
+   })();
+</script>
   </head>
   <body>
     <!-- header -->
@@ -94,15 +104,13 @@
             />
           </a>
 
-      
-
           <h3 id="project_title">Dice Game</h3>
           <p id="project_desc">A dice game that is build from React.js</p>
         </div>
         <!--  card 1 end -->
 
-<!--          card 2 start  -->
-<!--         <div class="card_container">
+        <!--  card 2 start  -->
+        <div class="card_container">
           <a href="#" class="card_image_container">
             <img
               src="./images/projectImage.jpg"
@@ -114,11 +122,11 @@
 
           <h3 id="project_title">Lorem, ipsum.</h3>
           <p id="project_desc">Lorem ipsum dolor sit amet.</p>
-        </div> -->
+        </div>
         <!--  card 2 end -->
 
         <!--  card 3 start  -->
-<!--         <div class="card_container">
+        <div class="card_container">
           <a href="#" class="card_image_container">
             <img
               src="./images/projectImage.jpg"
@@ -130,11 +138,11 @@
 
           <h3 id="project_title">Lorem, ipsum.</h3>
           <p id="project_desc">Lorem ipsum dolor sit amet.</p>
-        </div> -->
+        </div>
         <!--  card 3 end -->
 
         <!--  card 4 start  -->
-<!--         <div class="card_container">
+        <div class="card_container">
           <a href="#" class="card_image_container">
             <img
               src="./images/projectImage.jpg"
@@ -146,7 +154,7 @@
 
           <h3 id="project_title">Lorem, ipsum.</h3>
           <p id="project_desc">Lorem ipsum dolor sit amet.</p>
-        </div> -->
+        </div>
         <!--  card 4 end -->
       </div>
     </div>
@@ -235,7 +243,7 @@
           placeholder="Enter comment here..."
         ></textarea>
 
-        <button id="submit" class="formSubmit" type="submit">Submit</button>
+        <button id="submit" onclick="sendEmail()" class="formSubmit" type="submit">Submit</button>
       </form>
     </div>
 
